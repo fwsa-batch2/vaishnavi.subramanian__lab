@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+
+    <title>Merge and remove duplicate</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h2>Welcome</h2>
+    <script>
+        let array1 = [1, 2, 3, 4, 5];
+        document.write("Array 1 = " + array1 + "<br>");
+
+        let array2 = [4, 5, 6, 7, 8];
+        document.write("Array 2 = " + array2 + "<br>");
+
+        let mergedarray = [...array1, ...array2];
+        document.write("Merged array = " + mergedarray + "<br>");
+
+        let newarray = [...new Set(mergedarray)];
+        document.write("New Array = " + newarray);
+    </script>
+</body>
+
+</html>

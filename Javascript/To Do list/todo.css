@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(19, 4, 71);
+    background-image: url(./pexels-breakingpic-3243.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.div-1 {
+    background-color: rgb(44, 42, 42);
+    color: white;
+    margin-top: 10%;
+    margin-left: 34%;
+    font-size: larger;
+    align-items: center;
+    width: 20%;
+    padding-left: 4%;
+    padding-top: 2%;
+    box-shadow: rgb(141, 78, 16) 10px 10px 10px;
+}
+
+button {
+    margin-left: 9%;
+}
+
+form {
+    align-items: center;
+}
+
+
+/* .ul {
+    overflow: auto;
+    height: 25%;
+} */

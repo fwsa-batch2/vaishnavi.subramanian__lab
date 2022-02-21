@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+
+    <title>Array</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h2>Welcome</h2>
+    <script>
+        let array1 = [1, 2, 3, 4, 5, 6, 7];
+        let array2 = [1, 2, 3, 4, 8, 9, 10];
+
+        document.write("Array 1 = " + array1 + "<br>");
+        document.write("Array 2 = " + array2 + "<br>");
+
+        let compare = JSON.stringify(array1) == JSON.stringify(array2);
+        document.write("Result = " + compare + "<br>" + "<br>");
+
+        let array3 = [1, 2, 3];
+        let array4 = [1, 2, 3];
+
+        document.write("Array 1 = " + array3 + "<br>");
+        document.write("Array 2 = " + array4 + "<br>");
+
+        let compare1 = JSON.stringify(array3) == JSON.stringify(array4);
+        document.write("Result = " + compare1);
+    </script>
+</body>
+
+</html>

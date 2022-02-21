@@ -1,0 +1,20 @@
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.div-1 {
+    background-color: black;
+    color: white;
+    margin-left: 640px;
+    margin-top: 280px;
+    width: 500px;
+    padding: 10px;
+}
+
+button {
+    font-size: xx-large;
+    width: 80px;
+    margin-left: 10px;
+}

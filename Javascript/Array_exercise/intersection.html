@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+
+    <title>Array</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h2>Welcome</h2>
+    <script>
+        let array1 = [1, 2, 3, 4, 5];
+        let array2 = [3, 4, 5, 6, 7];
+        let array3 = [];
+        for (a of array1) {
+            for (b of array2) {
+                if (a == b) {
+                    array3.push(a);
+                }
+            }
+        }
+        document.write(array3);
+    </script>
+</body>
+
+</html>
