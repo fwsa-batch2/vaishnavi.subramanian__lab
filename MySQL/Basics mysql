@@ -140,7 +140,7 @@ DESC students_bio;
 | Name       | varchar(40) | NO   |     | NULL    |                |
 | Email      | varchar(40) | NO   | UNI | NULL    |                |
 | Age        | tinyint     | NO   |     | NULL    |                |
-| department | varchar(70) | NO  |     | NULL    |                |
+| department | varchar(70) | NO   |     | NULL    |                |
 ###### 5 rows in set (0.01 sec)
 #### To add column
 ```
