@@ -1,0 +1,114 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #63bfbf;
+}
+
+.div1 {
+    background-color: white;
+    text-align: center;
+}
+
+.div1 ul {
+    display: inline-flex;
+    list-style: none;
+    color: black;
+}
+
+#li1 {
+    margin-left: -120%;
+    padding: 0%;
+}
+
+#li2 {
+    color: black;
+    padding-top: 10%;
+    margin-left: 200%;
+    font-size: x-large;
+}
+
+#li3 {
+    padding-top: 10%;
+    padding-left: 15%;
+    font-size: x-large;
+}
+
+#li4 {
+    padding-top: 10%;
+    padding-left: 15%;
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    margin-top: 50px;
+    font-size: x-large;
+    margin-left: 680px;
+}
+
+.select {
+    width: 203px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: -10px;
+    border-radius: 10vh;
+}
+
+.input1 {
+    width: 350px;
+    height: 27px;
+    border-radius: 12vh;
+    font-size: large;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    padding-left: 70px;
+}
+
+.button1 {
+    width: 80px;
+    height: 31px;
+    border-radius: 10vh;
+}
+
+.hr1 {
+    margin-top: 40px;
+}
+
+.table {
+    color: black;
+}
+
+.table tr th {
+    padding-bottom: 2%;
+}
+
+#no1 {
+    padding-left: 60px;
+}
+
+#no2 {
+    padding-left: 510px;
+}
+
+#no3 {
+    padding-left: 500px;
+}
+
+th {
+    font-size: xx-large;
+}
+
+td {
+    font-size: x-large;
+}
+
+#tr2 {
+    padding-top: 200px;
+}

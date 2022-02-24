@@ -42,7 +42,7 @@ USE school;
 ***
 
 
-### Query to CREATE TABLE
+### Query to CREATE TABLE with CONSTRAINTS
 ```
 CREATE TABLE students_cs(Id int primary key auto_increment, Name varchar(40) NOT NULL, Email varchar(40) UNIQUE NOT NULL, Age tinyint(2) NOT NULL, Department varchar(70) default 'Computer Science' );
 ```
@@ -196,6 +196,12 @@ SELECT * FROM students_bio;
 ###### 3 rows in set (0.00 sec)
 ***
 
+### FOREIGN KEY
+```
+ALTER TABLE table2_name ADD foreign key(column_name) REFERENCES table1_name(column_name);
+```
+***
+
 ### Query to DELETE ROW
 ```
 DELETE FROM students_bio where ID=3;
@@ -260,4 +266,22 @@ SHOW DATABASES;
 | rm_cafe            |
 | sys                |
 ###### 5 rows in set (0.00 sec)
+***
+***
+## Aggregate functions
+```
+SELECT MIN(column_name) FROM table_name;
+```
+```
+SELECT MAX(column_name) FROM table_name;
+```
+```
+SELECT SUM(column_name) FROM table_name;
+```
+```
+SELECT COUNT(column_name) FROM table_name;
+```
+```
+SELECT AVG(column_name) FROM table_name;
+```
 ***

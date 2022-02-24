@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshclass Library</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <nav class="div1">
+        <ul>
+            <li id="li1"><img src="./assets/images/fclogo2.png" alt="logo" width="280px" height="100px"></li>
+            <li id="li2"><a href="./index.html">Home</a></li>
+            <li id="li3"><a href="./html/register.html">Register</a></li>
+            <li id="li4"><a href="./html/login.html">Login</a></li>
+        </ul>
+    </nav>
+
+
+    <form class="form1">
+        Choose the book genre:
+        <select name="department" class="select">
+                 <option>---</option>
+
+              <optgroup label="Educational">
+                 <option>Artificial Intelligence</option>
+                 <option>Computer Science</option>
+                 <option>ECE</option>
+                 <option>EEE</option>
+                 <option>Mechanical</option> 
+              </optgroup>
+
+              <optgroup label="Entertainment">
+                 <option>Action</option>
+                 <option>Comedy</option>
+                 <option>Comic</option>
+                 <option>Drama</option>
+                 <option>Fantasy</option>
+                 <option>Horror</option>
+                 <option>Thriller</option>
+                 
+              </optgroup>
+
+              <optgroup label="Others">
+                 <option>Economics</option>
+                 <option>Geography</option>
+                 <option>History</option>   
+              </optgroup>
+            </select><br>
+        <input class="input1" name="search" type="text" placeholder="Search books here">
+        <button class="button1">Search</button>
+    </form>
+    <hr class="hr1"><br>
+
+    <table class="table">
+        <caption></caption>
+        <tr>
+            <th id="no1">Education</th>
+            <th id="no2">Entertainment</th>
+            <th id="no3">Others</th>
+        </tr>
+
+        <tr class="tr2">
+            <td id="no1"><a href="./html/ai.html">- Artificial Intelligence</a></td>
+            <td id="no2"><a href="./html/action.html">- Action</a></td>
+            <td id="no3"><a href="./html/economics.html">- Economics</a></td>
+        </tr>
+        <tr>
+            <td id="no1"><a href="./html/cs.html">- Computer Science</a></td>
+            <td id="no2"><a href="./html/comedy.html">- Comedy</a></td>
+            <td id="no3">- Geography</td>
+        </tr>
+        <tr>
+            <td id="no1">- ECE</td>
+            <td id="no2">- Comic</td>
+            <td id="no3">- History</td>
+        </tr>
+        <tr>
+            <td id="no1">- EEE</td>
+            <td id="no2">- Drama</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="no1">- Mechanical</td>
+            <td id="no2">- Fantasy</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="no2">- Horror</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="no2">- Thriller</td>
+            <td></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
