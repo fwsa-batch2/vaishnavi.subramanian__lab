@@ -28,7 +28,7 @@ SHOW DATABASES;
 | mysql              |
 | performance_schema |
 | rm_cafe            |
-| school             |          |
+| school             |          
 | sys                |
 ###### 6 rows in set (0.00 sec)
 ***
