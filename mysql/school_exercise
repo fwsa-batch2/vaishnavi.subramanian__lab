@@ -167,26 +167,6 @@ select count(*),class from student_class where status="ACTIVE" group by class ha
 |        1 |    12 |
 
 ***
-##### Feature 13: Display student and class details Using Joins (Inner Join) * Using Subqueries ( Scalar SubQuery)
-```
-select * from students inner join student_class on students.id=student_class.student_id;
-```
-| id | name   | email              | mobile_no  | password   | gender | dob        | created_date        | id | student_id | class | status   |
-|:---|:-------|:-------------------|:-----------|:-----------|:-------|:-----------|:--------------------|:---|:-----------|:------|:---------|
-|  1 | Arohi  | arohi23@gmail.com  | 9827247842 | arohi12    | F      | 2000-07-12 | 2022-03-01 00:00:00 |  1 |          1 |    12 | ACTIVE   |
-|  4 | Sahana | sahana67@gmail.com | 9827573824 | sahana     | F      | 2000-05-14 | 2022-03-01 00:00:00 |  2 |          4 |     6 | INACTIVE |
-|  5 | Nikhil | nikhil8@gmail.com  | 9827648272 | nikhilking | M      | 2000-06-08 | 2022-03-01 00:00:00 |  3 |          5 |     6 | INACTIVE |
-
-```
-select * from students where id in(select student_id from student_class);
-```
-| id | name   | email              | mobile_no  | password   | gender | dob        | created_date        |
-|:---|:-------|:-------------------|:-----------|:-----------|:-------|:-----------|:--------------------|
-|  1 | Arohi  | arohi23@gmail.com  | 9827247842 | arohi12    | F      | 2000-07-12 | 2022-03-01 00:00:00 |
-|  4 | Sahana | sahana67@gmail.com | 9827573824 | sahana     | F      | 2000-05-14 | 2022-03-01 00:00:00 |
-|  5 | Nikhil | nikhil8@gmail.com  | 9827648272 | nikhilking | M      | 2000-06-08 | 2022-03-01 00:00:00 |
-
-***
 ##### Feature 14: Display Student Details for the given input class Class : 5th Standard Using Joins
 ```
 select * from students inner join student_class on students.id=student_class.student_id where student_class.class=5;
@@ -202,21 +182,6 @@ select sc.class from students st inner join student_class sc on st.id=sc.student
 |:------|
 |    12 |
 
-###### Empty set (0.01 sec)
-
-***
-##### Feature 16: Find Students who has not enrolled in a class Using Subquery ( multiple row subquery )
-```
-select name from students where id in(select student_id from student_class where class is not null);
-```
-| name   |
-|:-------|
-| Arohi  |
-| Sahana |
-| Nikhil |
-```
-select name from students where id in(select student_id from student_class where class is null);
-```
 ###### Empty set (0.01 sec)
 
 ***
