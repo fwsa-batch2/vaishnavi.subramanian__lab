@@ -220,3 +220,5 @@ select st.name,sc.class from students st left join student_class sc on st.id=sc.
 | Shalini |  NULL |
 | Merlin  |  NULL |
 ***
+
+select * from shipments where quantity_supplied > avg(quantity_supplied);
