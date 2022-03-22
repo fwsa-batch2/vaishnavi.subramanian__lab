@@ -1,6 +1,6 @@
 ## R&M Cafe
 
-```sqlZ                                                                                                                                                                                                                             
+```sql                                                                                                                                                                                                                             
 create database rm_cafe;
 ```
 
@@ -273,7 +273,7 @@ desc contact_us;
 | email   | varchar(50)  | NO   | UNI | NULL    |                |
 | queries | varchar(255) | NO   |     | NULL    |                |
 
-```
+```sql
 insert into contact_us values (1,"Alex",8754780601,"alexandar23@gmail.com","I want to know the exact running timing of the cafe"),(2,"Chithu",9987543782,"chithrajrajan2@gmail.com","I would like Filter Coffee to be added in the menu. It will be better if you also provide it."),(3,"Sunaina",8946743234,"sunai78@gmail.com","Is the cafe open on weekends too??");
 ```
 
