@@ -92,7 +92,7 @@ select * from salary_less_than_5000;       -----------view
 |  6 | Vinay  |   3500 |
 |  7 | Sam    |   2500 |
 
-###### 3 rows in set (0.00 sec)
+###### 3 rows in set (0.  00 sec)
 ```
 select * from office;     -----------main table
 ```
