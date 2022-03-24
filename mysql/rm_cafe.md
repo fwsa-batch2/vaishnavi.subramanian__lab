@@ -327,11 +327,19 @@ show tables;
 | user_roles        |
 
 ***
+![1](https://user-images.githubusercontent.com/93571050/159883515-1819455b-e3d6-4fe2-9922-ab4fac623008.png)
+***
+![2](https://user-images.githubusercontent.com/93571050/159883529-20004a6e-a211-408a-be17-40cb4bea6fd8.png)
+***
+![3](https://user-images.githubusercontent.com/93571050/159883542-c6791866-a76c-425b-8dea-60530ba7b774.png)
+***
+![4](https://user-images.githubusercontent.com/93571050/159883552-b4dc70cb-69a5-4ef8-b2e0-9663860600bb.png)
+***
+![5](https://user-images.githubusercontent.com/93571050/159883562-d9cf3fd4-717b-41f1-881d-0cd0b59bf6f8.png)
+***
 #### ER Diagram
 ![Drawing (4)](https://user-images.githubusercontent.com/93571050/159880633-be7ddad5-0f8e-42f9-b694-542ae9fdfa57.png)
-
 ***
 #### EER Diagram
 ![Screenshot from 2022-03-22 12-56-16](https://user-images.githubusercontent.com/93571050/159881090-54712e2c-cfef-4932-804e-763d7bdf1ab9.png)
-
 
