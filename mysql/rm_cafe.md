@@ -311,22 +311,6 @@ select * from contact;
 
 ***
 
-```sql
-show tables;
-```
-
-| Tables_in_rm_cafe |
-|:------------------|
-| contact           |
-| listOfCoffee      |
-| ordered_items     |
-| orders            |
-| reviews           |
-| roles             |
-| user_details      |
-| user_roles        |
-
-***
 
 
 
