@@ -13,7 +13,7 @@ use rm_cafe;
 ***
 #### Table 1 : User Details
 ```sql
-create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number varchar(10) not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
+create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number int not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
 ```
 
 ```sql
@@ -36,7 +36,7 @@ desc user_details;
 |:---------|:-------------|:-----|:----|:--------|:---------------|
 | id       | int          | NO   | PRI | NULL    | auto_increment |
 | name     | varchar(50)  | NO   |     | NULL    |                |
-| number   | varchar(10)  | NO   |     | NULL    |                |
+| number   | int          | NO   |     | NULL    |                |
 | email    | varchar(50)  | NO   | UNI | NULL    |                |
 | password | varchar(20)  | NO   |     | NULL    |                |
 
@@ -44,7 +44,7 @@ desc user_details;
 select * from user_details;
 ```
 
-| id | name      | number     | email                 | password      |
+| id     | name      | number     | email                 | password      |
 |:-------|:----------|:-----------|:----------------------|:--------------|
 |    101 | Nikhil    | 9876543210 | nikhil65@gmail.com    | jokesapart    | 
 |    102 | Ismail    | 9643521895 | ismailu@gmail.com     | sahanaismail  | 
@@ -60,7 +60,6 @@ select * from user_details;
 #### Table 2 : User Address
 ```sql
 create table user_address (id int primary key auto_increment ,user_id int not null,address varchar(100) not null,city varchar(50) not null default 'Chennai',pincode int not null, foreign key(user_id) references user_details(id));
-
 ```
 
 ```sql
