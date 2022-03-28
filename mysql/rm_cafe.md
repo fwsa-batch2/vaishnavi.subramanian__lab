@@ -350,6 +350,5 @@ alter table orders add column address varchar(100) not null, foreign key(address
 ![Drawing (4)](https://user-images.githubusercontent.com/93571050/159880633-be7ddad5-0f8e-42f9-b694-542ae9fdfa57.png)
 ***
 #### EER Diagram
-![Screenshot from 2022-03-22 12-56-16](https://user-images.githubusercontent.com/93571050/159881090-54712e2c-cfef-4932-804e-763d7bdf1ab9.png)
->>>>>>> 0499a9bb24e9d65b8b3fff596540619e7fc285f0
+![rm_cafe eer](https://user-images.githubusercontent.com/93571050/160366251-0ab5ca8a-b397-4f59-8305-da3efb07da4a.png)
 
