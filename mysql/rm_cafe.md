@@ -13,7 +13,7 @@ use rm_cafe;
 ***
 #### Table 1 : User Details
 ```sql
-create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number varchar(10) not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
+create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number bigint not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
 ```
 
 ```sql
@@ -36,7 +36,7 @@ desc user_details;
 |:---------|:-------------|:-----|:----|:--------|:---------------|
 | id       | int          | NO   | PRI | NULL    | auto_increment |
 | name     | varchar(50)  | NO   |     | NULL    |                |
-| number   | varchar(10)  | NO   |     | NULL    |                |
+| number   | bigint       | NO   |     | NULL    |                |
 | email    | varchar(50)  | NO   | UNI | NULL    |                |
 | password | varchar(20)  | NO   |     | NULL    |                |
 
@@ -352,4 +352,5 @@ alter table orders add column address varchar(100) not null, foreign key(address
 #### EER Diagram
 ![Screenshot from 2022-03-22 12-56-16](https://user-images.githubusercontent.com/93571050/159881090-54712e2c-cfef-4932-804e-763d7bdf1ab9.png)
 >>>>>>> 0499a9bb24e9d65b8b3fff596540619e7fc285f0
+
 
