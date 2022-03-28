@@ -324,22 +324,13 @@ select * from contact;
 |  3 | Sunaina | 8946743234 | sunai78@gmail.com        | Is the cafe open on weekends too??                                                            |
 
 ***
-!!!!!11
 
-
-
-<<<<<<< HEAD
-alter table orders add column address varchar(100) not null, foreign key(address) references user_address(id)
-
-
-
-=======
 ***
 ![1](https://user-images.githubusercontent.com/93571050/159883515-1819455b-e3d6-4fe2-9922-ab4fac623008.png)
 ***
 ![2](https://user-images.githubusercontent.com/93571050/159883529-20004a6e-a211-408a-be17-40cb4bea6fd8.png)
 ***
-![3](https://user-images.githubusercontent.com/93571050/159883542-c6791866-a76c-425b-8dea-60530ba7b774.png)
+![3]![ipo](https://user-images.githubusercontent.com/93571050/160369108-dd61f348-7fb9-4e83-b9be-27dc8f8e4459.png)
 ***
 ![4](https://user-images.githubusercontent.com/93571050/159883552-b4dc70cb-69a5-4ef8-b2e0-9663860600bb.png)
 ***
