@@ -13,7 +13,7 @@ use rm_cafe;
 ***
 #### Table 1 : User Details
 ```sql
-create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number int not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
+create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number bigint not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
 ```
 
 ```sql
@@ -36,7 +36,7 @@ desc user_details;
 |:---------|:-------------|:-----|:----|:--------|:---------------|
 | id       | int          | NO   | PRI | NULL    | auto_increment |
 | name     | varchar(50)  | NO   |     | NULL    |                |
-| number   | int          | NO   |     | NULL    |                |
+| number   | bigint       | NO   |     | NULL    |                |
 | email    | varchar(50)  | NO   | UNI | NULL    |                |
 | password | varchar(20)  | NO   |     | NULL    |                |
 
