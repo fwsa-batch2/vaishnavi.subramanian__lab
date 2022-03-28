@@ -13,7 +13,7 @@ use rm_cafe;
 ***
 #### Table 1 : User Details
 ```sql
-create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number varchar(10) not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8),city varchar(30) default "Chennai");
+create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number varchar(10) not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
 ```
 
 ```sql
@@ -21,11 +21,11 @@ alter table user_details add column pincode int not null;
 ```
 
 ```sql
-insert into user_details values (101, "Nikhil","9876543210", "nikhil65@gmail.com","jokesapart","No.40,Kurinji St,Anna Nagar",609002);
+insert into user_details values (101, "Nikhil","9876543210", "nikhil65@gmail.com","jokesapart");
 ```
 
 ```sql
-insert into user_details (name,number,email,password,address,pincode) values ("Ismail",9643521895,"ismailu@gmail.com","sahanaismail","No.69,Kamaraj St",678098),("Vaishnavi",9324568903,"vaishnavi12@gmail.com","screenshot","No.20,Pandiyan St,Vandalur",657894),("Ana",8795436320,"anamano@gmail.com","chocolates","No.19,Mullai St,Kandanchavadi",665837),("San",8765436589,"santhanunu@gmail.com","santaclaus","No.34,Siranjivi St,Perungudi",675342),("Surya",9683467321,"surya@gmail.com","cornflakes","No.29,Mullai St,Vadapalani",687954),("Hasan",8976536782,"hasanasan@gmail.com","humairaha","No.34,Maya Nagar,Thuraipakkam",678954),("Yavvana",8779564381,"yavva@gmail.com","chickenchilly","No.12,North St,Mambalam",690943);
+insert into user_details (name,number,email,password) values ("Ismail",9643521895,"ismailu@gmail.com","sahanaismail),("Vaishnavi",9324568903,"vaishnavi12@gmail.com","screenshot"),("Ana",8795436320,"anamano@gmail.com","chocolates"),("San",8765436589,"santhanunu@gmail.com","santaclaus"),("Surya",9683467321,"surya@gmail.com","cornflakes"),("Hasan",8976536782,"hasanasan@gmail.com","humairaha"),("Yavvana",8779564381,"yavva@gmail.com","chickenchilly");
 ```
 
 ```sql
@@ -39,43 +39,58 @@ desc user_details;
 | number   | varchar(10)  | NO   |     | NULL    |                |
 | email    | varchar(50)  | NO   | UNI | NULL    |                |
 | password | varchar(20)  | NO   |     | NULL    |                |
-| address  | varchar(100) | NO   |     | NULL    |                |
-| city     | varchar(30)  | NO   |     | Chennai |                |
-| pincode  | int          | NO   |     | NULL    |                |
 
 ```sql
 select * from user_details;
 ```
 
-| id | name      | number     | email                 | password      | address                       | city    | pincode |
-|:-------|:----------|:-----------|:----------------------|:--------------|:------------------------------|:--------|:--------|
-|    101 | Nikhil    | 9876543210 | nikhil65@gmail.com    | jokesapart    | No.40,Kurinji St,Anna Nagar   | Chennai |  609002 |
-|    102 | Ismail    | 9643521895 | ismailu@gmail.com     | sahanaismail  | No.69,Kamaraj St              | Chennai |  678098 |
-|    103 | Vaishnavi | 9324568903 | vaishnavi12@gmail.com | screenshot    | No.20,Pandiyan St,Vandalur    | Chennai |  657894 |
-|    104 | Ana       | 8795436320 | anamano@gmail.com     | chocolates    | No.19,Mullai St,Kandanchavadi | Chennai |  665837 |
-|    105 | San       | 8765436589 | santhanunu@gmail.com  | santaclaus    | No.34,Siranjivi St,Perungudi  | Chennai |  675342 |
-|    106 | Surya     | 9683467321 | surya@gmail.com       | cornflakes    | No.29,Mullai St,Vadapalani    | Chennai |  687954 |
-|    107 | Hasan     | 8976536782 | hasanasan@gmail.com   | humairaha     | No.34,Maya Nagar,Thuraipakkam | Chennai |  678954 |
-|    108 | Yavvana   | 8779564381 | yavva@gmail.com       | chickenchilly | No.12,North St,Mambalam       | Chennai |  690943 |
+| id | name      | number     | email                 | password      |
+|:-------|:----------|:-----------|:----------------------|:--------------|
+|    101 | Nikhil    | 9876543210 | nikhil65@gmail.com    | jokesapart    | 
+|    102 | Ismail    | 9643521895 | ismailu@gmail.com     | sahanaismail  | 
+|    103 | Vaishnavi | 9324568903 | vaishnavi12@gmail.com | screenshot    | 
+|    104 | Ana       | 8795436320 | anamano@gmail.com     | chocolates    | 
+|    105 | San       | 8765436589 | santhanunu@gmail.com  | santaclaus    |
+|    106 | Surya     | 9683467321 | surya@gmail.com       | cornflakes    | 
+|    107 | Hasan     | 8976536782 | hasanasan@gmail.com   | humairaha     |
+|    108 | Yavvana   | 8779564381 | yavva@gmail.com       | chickenchilly | 
 
+
+***
+#### Table 2 : User Address
 ```sql
-update user_details set address = "No.69,Kamaraj St,Camp road" where name="Ismail";
+create table user_address (id int primary key auto_increment ,user_id int not null,address varchar(100) not null,city varchar(50) not null default 'Chennai',pincode int not null, foreign key(user_id) references user_details(id));
+
 ```
 
-| id | name      | number     | email                 | password      | address                       | city    | pincode |
-|:-------|:----------|:-----------|:----------------------|:--------------|:------------------------------|:--------|:--------|
-|    101 | Nikhil    | 9876543210 | nikhil65@gmail.com    | jokesapart    | No.40,Kurinji St,Anna Nagar   | Chennai |  609002 |
-|    102 | Ismail    | 9643521895 | ismailu@gmail.com     | sahanaismail  | No.69,Kamaraj St,Camp road    | Chennai |  678098 |
-|    103 | Vaishnavi | 9324568903 | vaishnavi12@gmail.com | screenshot    | No.20,Pandiyan St,Vandalur    | Chennai |  657894 |
-|    104 | Ana       | 8795436320 | anamano@gmail.com     | chocolates    | No.19,Mullai St,Kandanchavadi | Chennai |  665837 |
-|    105 | San       | 8765436589 | santhanunu@gmail.com  | santaclaus    | No.34,Siranjivi St,Perungudi  | Chennai |  675342 |
-|    106 | Surya     | 9683467321 | surya@gmail.com       | cornflakes    | No.29,Mullai St,Vadapalani    | Chennai |  687954 |
-|    107 | Hasan     | 8976536782 | hasanasan@gmail.com   | humairaha     | No.34,Maya Nagar,Thuraipakkam | Chennai |  678954 |
-|    108 | Yavvana   | 8779564381 | yavva@gmail.com       | chickenchilly | No.12,North St,Mambalam       | Chennai |  690943 |
+```sql
+desc user_address;
+```
+| Field   | Type         | Null | Key | Default | Extra          |
+|:--------|:-------------|:-----|:----|:--------|:---------------|
+| id      | int          | NO   | PRI | NULL    | auto_increment |
+| user_id | int          | NO   | MUL | NULL    |                |
+| address | varchar(100) | NO   |     | NULL    |                |
+| city    | varchar(50)  | NO   |     | Chennai |                |
+| pincode | int          | NO   |     | NULL    |                |
+
+```sql
+insert into user_address (user_id,address,pincode) values (101,"No.40,Kurunji St,Anna Nagar",608238),(102,"No.69,Kamaraj St,Cam road",678098),(103,"NO.20,Pandiyan St,Vandalur",657894),(104,"No.19,Mullai St,Kandanchavadi",665837),(105,"No.34,Siranjivi St,Perungudi",673267),(106,"No.12,North St,Mambalam",690459),(107,"No.29,Marudham St,Vadapalani",687098),(108,"No.98,Maya Nagar,Thuraipakkam",638983);
+```
+| id | user_id | address                       | city    | pincode |
+|:---|:--------|:------------------------------|:--------|:--------|
+|  1 |     101 | No.40,Kurunji St,Anna Nagar   | Chennai |  608238 |
+|  2 |     102 | No.69,Kamaraj St,Cam road     | Chennai |  678098 |
+|  3 |     103 | NO.20,Pandiyan St,Vandalur    | Chennai |  657894 |
+|  4 |     104 | No.19,Mullai St,Kandanchavadi | Chennai |  665837 |
+|  5 |     105 | No.34,Siranjivi St,Perungudi  | Chennai |  673267 |
+|  6 |     106 | No.12,North St,Mambalam       | Chennai |  690459 |
+|  7 |     107 | No.29,Marudham St,Vadapalani  | Chennai |  687098 |
+|  8 |     108 | No.98,Maya Nagar,Thuraipakkam | Chennai |  638983 |
 
 ***
 
-#### Table 2 : Roles
+#### Table 3 : Roles
 ```sql
 create table roles (id int primary key auto_increment,role_name varchar(50) unique not null);
 ```
@@ -104,7 +119,7 @@ select * from roles
 
 ***
 
-#### Table 3 : User Roles
+#### Table 4 : User Roles
 ```sql
 create table user_roles (id int primary key auto_increment,user_id int,foreign key(user_id) references user_details(id),role_id int,foreign key(role_id) references roles(id));
 ```
@@ -138,7 +153,7 @@ select * from user_roles;
 
 ***
 
-#### Table 4 : List of Coffee
+#### Table 5 : List of Coffee
 
 ```sql
 create table listOfCoffee (coffeeId int primary key auto_increment, coffeeName varchar(30) unique not null, price int not null);
@@ -178,7 +193,7 @@ select * from listOfCoffee;
 
 ***
 
-#### Table 5 : Orders
+#### Table 6 : Orders
 
 ```sql
 create table orders (id int primary key auto_increment, user_id int not null, ordered_date datetime not null, foreign key(user_id) references user_details(id));
@@ -211,7 +226,7 @@ insert into orders values(1,101,"2022-01-01 12-10-11"),(2,105,"2022-01-01 12-15-
 
 ***
 
-#### Table 6 : Ordered Items
+#### Table 7 : Ordered Items
 
 ```sql
 create table ordered_items (order_number int not null, coffeeId int not null,quantity int not null, foreign key(coffeeId) references listOfCoffee(coffeeId), foreign key(order_number) references orders(id));
@@ -248,7 +263,7 @@ select * from ordered_items;
 
 ***
 
-#### Table 7 : Reviews
+#### Table 8 : Reviews
 
 ```sql
 create table reviews (user_id int not null, reviews varchar(255) not null, ratings int not null,foreign key(user_id) references user_details(id));
@@ -277,7 +292,7 @@ insert into reviews values (103,"I would probably say that this coffee shop is a
 
 ***
 
-#### Table 8 : Contact
+#### Table 9 : Contact
 
 ```sql
 create table contact (id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number bigint not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),queries varchar(255) not null);
@@ -310,6 +325,11 @@ select * from contact;
 |  3 | Sunaina | 8946743234 | sunai78@gmail.com        | Is the cafe open on weekends too??                                                            |
 
 ***
+!!!!!11
+
+
+
+alter table orders add column address varchar(100) not null, foreign key(address) references user_address(id)
 
 
 
