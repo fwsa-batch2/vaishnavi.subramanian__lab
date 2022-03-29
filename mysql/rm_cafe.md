@@ -343,4 +343,4 @@ select * from contact;
 ![Drawing (4) (1)](https://user-images.githubusercontent.com/93571050/160389914-b4c8916b-b175-4076-893e-2c55323c2e4f.png)
 ***
 #### EER Diagram
-![nowww](https://user-images.githubusercontent.com/93571050/160576730-c6f29cae-adea-439a-826d-b346505969f2.png)
+![Screenshot from 2022-03-29 14-40-32](https://user-images.githubusercontent.com/93571050/160577008-4aa595c5-8b51-4ae9-9e43-542b84d684b2.png)
