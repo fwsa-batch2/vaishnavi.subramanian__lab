@@ -13,7 +13,11 @@ use rm_cafe;
 ***
 #### Table 1 : User Details
 ```sql
+<<<<<<< HEAD
 create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number bigint not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
+=======
+create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number int not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
+>>>>>>> 2730a013ba5741debd41a025e22c2fa899db9f61
 ```
 
 ```sql
@@ -37,6 +41,7 @@ desc user_details;
 | id       | int          | NO   | PRI | NULL    | auto_increment |
 | name     | varchar(50)  | NO   |     | NULL    |                |
 | number   | bigint       | NO   |     | NULL    |                |
+| number   | int          | NO   |     | NULL    |                |
 | email    | varchar(50)  | NO   | UNI | NULL    |                |
 | password | varchar(20)  | NO   |     | NULL    |                |
 
@@ -44,7 +49,7 @@ desc user_details;
 select * from user_details;
 ```
 
-| id | name      | number     | email                 | password      |
+| id     | name      | number     | email                 | password      |
 |:-------|:----------|:-----------|:----------------------|:--------------|
 |    101 | Nikhil    | 9876543210 | nikhil65@gmail.com    | jokesapart    | 
 |    102 | Ismail    | 9643521895 | ismailu@gmail.com     | sahanaismail  | 
@@ -60,7 +65,6 @@ select * from user_details;
 #### Table 2 : User Address
 ```sql
 create table user_address (id int primary key auto_increment ,user_id int not null,address varchar(100) not null,city varchar(50) not null default 'Chennai',pincode int not null, foreign key(user_id) references user_details(id));
-
 ```
 
 ```sql
@@ -325,22 +329,13 @@ select * from contact;
 |  3 | Sunaina | 8946743234 | sunai78@gmail.com        | Is the cafe open on weekends too??                                                            |
 
 ***
-!!!!!11
 
-
-
-<<<<<<< HEAD
-alter table orders add column address varchar(100) not null, foreign key(address) references user_address(id)
-
-
-
-=======
 ***
 ![1](https://user-images.githubusercontent.com/93571050/159883515-1819455b-e3d6-4fe2-9922-ab4fac623008.png)
 ***
 ![2](https://user-images.githubusercontent.com/93571050/159883529-20004a6e-a211-408a-be17-40cb4bea6fd8.png)
 ***
-![3](https://user-images.githubusercontent.com/93571050/159883542-c6791866-a76c-425b-8dea-60530ba7b774.png)
+![3]![spr](https://user-images.githubusercontent.com/93571050/160369725-be9702b9-471a-4acb-bde2-24630cad1cde.png)
 ***
 ![4](https://user-images.githubusercontent.com/93571050/159883552-b4dc70cb-69a5-4ef8-b2e0-9663860600bb.png)
 ***
@@ -350,7 +345,6 @@ alter table orders add column address varchar(100) not null, foreign key(address
 ![Drawing (4)](https://user-images.githubusercontent.com/93571050/159880633-be7ddad5-0f8e-42f9-b694-542ae9fdfa57.png)
 ***
 #### EER Diagram
-![Screenshot from 2022-03-22 12-56-16](https://user-images.githubusercontent.com/93571050/159881090-54712e2c-cfef-4932-804e-763d7bdf1ab9.png)
->>>>>>> 0499a9bb24e9d65b8b3fff596540619e7fc285f0
+![rm_cafe eer](https://user-images.githubusercontent.com/93571050/160366251-0ab5ca8a-b397-4f59-8305-da3efb07da4a.png)
 
 
