@@ -14,10 +14,14 @@ use rm_cafe;
 #### Table 1 : User Details
 ```sql
 <<<<<<< HEAD
+<<<<<<< HEAD
 create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number bigint not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
 =======
 create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number int not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
 >>>>>>> 2730a013ba5741debd41a025e22c2fa899db9f61
+=======
+create table user_details(id int primary key auto_increment,name varchar(50) not null check(length(name)>=3),number bigint not null check(length(number)=10), email varchar(50) not null unique check(email like("___%@gmail.com")),password varchar(20) not null check(length(password)>=8));
+>>>>>>> 8dbfbe55299b27e39f69e17f11955b642fc9e878
 ```
 
 ```sql
@@ -41,7 +45,10 @@ desc user_details;
 | id       | int          | NO   | PRI | NULL    | auto_increment |
 | name     | varchar(50)  | NO   |     | NULL    |                |
 | number   | bigint       | NO   |     | NULL    |                |
+<<<<<<< HEAD
 | number   | int          | NO   |     | NULL    |                |
+=======
+>>>>>>> 8dbfbe55299b27e39f69e17f11955b642fc9e878
 | email    | varchar(50)  | NO   | UNI | NULL    |                |
 | password | varchar(20)  | NO   |     | NULL    |                |
 
@@ -333,18 +340,25 @@ select * from contact;
 ***
 ![1](https://user-images.githubusercontent.com/93571050/159883515-1819455b-e3d6-4fe2-9922-ab4fac623008.png)
 ***
-![2](https://user-images.githubusercontent.com/93571050/159883529-20004a6e-a211-408a-be17-40cb4bea6fd8.png)
+
+![num1](https://user-images.githubusercontent.com/93571050/160388043-7d76c947-8778-4c99-8222-0c696232d82c.png)
 ***
-![3]![spr](https://user-images.githubusercontent.com/93571050/160369725-be9702b9-471a-4acb-bde2-24630cad1cde.png)
+![num2](https://user-images.githubusercontent.com/93571050/160388048-984ef832-8d87-4a1e-9807-9977e7b3add3.png)
 ***
-![4](https://user-images.githubusercontent.com/93571050/159883552-b4dc70cb-69a5-4ef8-b2e0-9663860600bb.png)
+![num3](https://user-images.githubusercontent.com/93571050/160388054-31505450-963a-4c23-85f1-26fd9e61843c.png)
 ***
-![5](https://user-images.githubusercontent.com/93571050/159883562-d9cf3fd4-717b-41f1-881d-0cd0b59bf6f8.png)
+![num4](https://user-images.githubusercontent.com/93571050/160388056-430dc1db-6b9f-4151-9589-0e3c6c58e3e4.png)
+***
+![num5](https://user-images.githubusercontent.com/93571050/160388061-36933a9d-8704-49d0-9a56-3b68fbdbe49b.png)
 ***
 #### ER Diagram
-![Drawing (4)](https://user-images.githubusercontent.com/93571050/159880633-be7ddad5-0f8e-42f9-b694-542ae9fdfa57.png)
+![Drawing (4) (1)](https://user-images.githubusercontent.com/93571050/160389914-b4c8916b-b175-4076-893e-2c55323c2e4f.png)
 ***
 #### EER Diagram
+<<<<<<< HEAD
 ![rm_cafe eer](https://user-images.githubusercontent.com/93571050/160366251-0ab5ca8a-b397-4f59-8305-da3efb07da4a.png)
 
 
+=======
+![Screenshot from 2022-03-29 14-40-32](https://user-images.githubusercontent.com/93571050/160577008-4aa595c5-8b51-4ae9-9e43-542b84d684b2.png)
+>>>>>>> 8dbfbe55299b27e39f69e17f11955b642fc9e878
