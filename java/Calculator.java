@@ -26,22 +26,25 @@ public class Calculator {
     int sum = (a + b);
     return sum;
   }
-    int subtraction(int input3, int input4) {
-      a = input3;
-      b = input4;
-      int minus = (a - b);
-      return minus;
-    }
-      int multiplication(int input1, int input2) {
-        a = input1;
-        b = input2;
-        int mul = (a * b);
-        return mul;
-      }
-        int division(int input1, int input2) {
-          a = input1;
-          b = input2;
-          int div = (a / b);
-          return div;
+
+  int subtraction(int input3, int input4) {
+    a = input3;
+    b = input4;
+    int minus = (a - b);
+    return minus;
+  }
+
+  int multiplication(int input1, int input2) {
+    a = input1;
+    b = input2;
+    int mul = (a * b);
+    return mul;
+  }
+
+  int division(int input1, int input2) {
+    a = input1;
+    b = input2;
+    int div = (a / b);
+    return div;
   }
 }

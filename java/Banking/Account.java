@@ -1,15 +1,13 @@
 package Banking;
 public class Account {
 
-    String bank ;
-    Integer accountNumber;
-    String IFSC = "0000001"; 
-    String name;
-    String address;
-
-    Integer balance;
-
-
+    private String bank ;
+    private int accountNumber;
+    private String IFSC = "0000001";
+    private String name;
+    private String address;
+    private int balance;
+    
     Account( String bankName ,String username, String userAddress ){
         bank = bankName;
         name = username;
@@ -18,7 +16,7 @@ public class Account {
         balance = 0;
     }
 
-    Account( String bankName , String username, String userAddress, Integer userBalance ){
+    Account(String bankName , String username, String userAddress, int userBalance ){
         bank = bankName;
         name = username;
         address = userAddress;
@@ -28,13 +26,13 @@ public class Account {
 
 
     // add money to the account
-    public void credit(Integer amount) {
+    public void credit(int amount) {
         balance = balance + amount;
         System.out.println( "New balance is : "+ balance);
     }
 
     // taking money from the account
-    public void debit(Integer amount) {
+    public void debit(int amount) {
         balance = balance - amount;
         System.out.println( "New balance is : "+ balance);
     }
