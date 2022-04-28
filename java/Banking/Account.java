@@ -36,5 +36,4 @@ public class Account {
         balance = balance - amount;
         System.out.println( "New balance is : "+ balance);
     }
-
 }
