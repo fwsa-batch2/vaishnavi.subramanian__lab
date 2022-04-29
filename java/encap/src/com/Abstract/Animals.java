@@ -17,7 +17,7 @@ abstract class Animal{
     abstract void eat();
     abstract void sleep();
 }
-class Mouse {
+class Mouse extends Animal {
     void eat(){
         System.out.println("Mouse eats cheese");
     }
@@ -28,7 +28,7 @@ class Mouse {
         System.out.println("Mouse works for 1 hour");
     }
 }
-class Rabbit{
+class Rabbit extends Animal{
     void eat(){
         System.out.println("Rabbit eats carrot");
     }
