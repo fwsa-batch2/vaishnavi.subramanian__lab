@@ -1,5 +1,10 @@
 package com.Abstract;
 
+abstract class Animal{
+    abstract void eat();
+    abstract void sleep();
+}
+
 public class Animals {
    public static void main(String args[]){
        Mouse obj1 = new Mouse();
@@ -9,14 +14,9 @@ public class Animals {
 
        Rabbit obj2 = new Rabbit();
        obj2.all();
-
    }
 }
 
-abstract class Animal{
-    abstract void eat();
-    abstract void sleep();
-}
 class Mouse extends Animal {
     void eat(){
         System.out.println("Mouse eats cheese");

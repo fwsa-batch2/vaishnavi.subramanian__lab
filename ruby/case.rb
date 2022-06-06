@@ -15,3 +15,10 @@ def case_practice
     end
 end
 case_practice
+
+
+
+
+
+
+
